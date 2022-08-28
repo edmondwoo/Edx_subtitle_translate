@@ -1,0 +1,25 @@
+{
+  "name": "Edx subtitle translate",
+  "description": "Translate the subtitle of edx class",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+        "matches": [
+            "https://courses.edx.org/xblock/*"
+        ],
+        "js": ["content.js"],
+        "all_frames": true
+    }
+  ],
+  "host_permissions": [
+    "https://courses.edx.org/xblock/*"
+  ]
+}
