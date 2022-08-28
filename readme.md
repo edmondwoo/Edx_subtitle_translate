@@ -1,0 +1,1 @@
+This is the chrome extension. It translate the subtitle of edx class.
